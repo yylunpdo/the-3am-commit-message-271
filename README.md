@@ -6,7 +6,7 @@
 
 Entry for the [make.fun bounty "The 3AM Commit Message"](https://make.fun/bounty/u-kiencx-the-3am-commit-message-10bc7b35): one line, at most 139 characters — the funniest git commit message an AI coding agent might type at 3am after a long night of fixing its own bugs.
 
-`main.py` (pure Python stdlib, no network) writes the single-line commit message to `/output/entry.txt`.
+`main.py` (pure Python stdlib, no network) writes the single-line commit message to `/output/entry.txt`. It enforces the bounty rules itself: at most 139 characters, exactly one line, no leading/trailing whitespace, and a `fix:` commit-message prefix.
 
 The entry:
 

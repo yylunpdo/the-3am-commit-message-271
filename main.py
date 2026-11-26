@@ -16,6 +16,8 @@ MAX_CHARS = 139
 def main():
     assert len(ENTRY) <= MAX_CHARS, f"entry is {len(ENTRY)} chars, max {MAX_CHARS}"
     assert "\n" not in ENTRY, "entry must be a single line"
+    assert ENTRY == ENTRY.strip(), "entry must have no leading/trailing whitespace"
+    assert ENTRY.startswith("fix: "), "entry must read as a commit message"
     out_dir = "/output"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "entry.txt")
